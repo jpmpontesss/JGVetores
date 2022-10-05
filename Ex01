@@ -1,17 +1,17 @@
 #include <stdio.h>
-#include <string.h>
-#define LENGHT 17
-
 int main()
 {
+    char s1[] = "aulinha do bill", s2[100], i;
+    
+    printf("string s1 : %s\n", s1);
 
-    char a[LENGHT] =  "esse e o conteudo que vai para String B",
-b[LENGHT];
+    for (i = 0; s1[i] != '\0'; ++i) {
+        s2[i] = s1[i];
+    }
 
-strcpy (b, "wagner");
-printf ("%s\n", b);
-strcpy (b, a);
+    s2[i] = '\0';
 
-printf ("%s\n", b);
+    printf("String s2 : %s", s2);
+
     return 0;
 }
