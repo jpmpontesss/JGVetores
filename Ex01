@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#define LENGHT 17
+
+int main()
+{
+
+    char a[LENGHT] =  "esse e o conteudo que vai para String B",
+b[LENGHT];
+
+strcpy (b, "wagner");
+printf ("%s\n", b);
+strcpy (b, a);
+
+printf ("%s\n", b);
+    return 0;
+}
