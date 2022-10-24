@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+    int D[2][2], i=0, j=0, soma1=0,soma2=0 ,x=2;
+    printf("--------------------------\ninforme os valores da matriz\n__________\n");
+    for(i=0;i<2;i++){
+        x--;
+        for(j=0;j<2;j++){
+            printf("%d - %d = ",i+1,j+1);
+            scanf("%d",&D[i][j]);
+        }
+        soma1=soma1+D[i][i];
+        soma2=soma2+D[i][x];
+    }
+    printf("\n-----------\nsoma diagonal 1:\t%d",soma1);
+    printf("\n-----------\nsoma diagonal 2:\t%d",soma2);
+    
+    int E[2][2], g=0, f=0, soma3=0,soma4=0 ,y=2;
+    printf("\n--------------------------\ninforme os valores da matriz\n__________\n");
+    for(g=0;g<2;g++){
+        y--;
+        for(f=0;f<2;f++){
+            printf("%d - %d = ",g+1,f+1);
+            scanf("%d",&E[g][f]);
+        }
+        soma3=soma3+E[g][g];
+        soma4=soma4+E[g][y];
+    }
+    printf("\n-----------\nsoma diagonal 3:\t%d",soma3);
+    printf("\n-----------\nsoma diagonal 4:\t%d",soma4);
+    
+    if (soma1+soma3 == 0){
+        printf("\nAs matrizes sÃ£o opostas!!\n");
+    }
+    else
+        printf("\nAs Matrizes nÃ£o sÃ£o opostas!\n");
+    return 0;
+}
